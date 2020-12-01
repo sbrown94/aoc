@@ -16,16 +16,31 @@ namespace Day1
         {
             var lines = InputHelpers.GetAllLinesAsListInt();
 
-            var combination = GetAnswerCombo(lines);
-
-            Console.WriteLine($"First Number: {combination.firstNo} | Second Number: {combination.secondNo}");
-
-            var answer = combination.firstNo * combination.secondNo;
+            var answer = GetThreeAnswerCombo(lines);
 
             Console.WriteLine($"Answer: {answer}");
         }
 
-        private (int firstNo, int secondNo) GetAnswerCombo(List<int> lines)
+        private int GetThreeAnswerCombo(List<int> lines)
+        {
+            for (var i = 0; i < lines.Count; i++)
+            {
+                for (var j = 0; j < lines.Count; j++)
+                {
+                    for (var k = 0; k < lines.Count; k++)
+                    {
+                        if (i == j || i == k || j == k) continue;
+
+                        if (lines[i] + lines[j] + lines[k] == 2020)
+                            return lines[i] * lines[j] * lines[k];
+                    }
+                }
+            }
+
+            throw new InvalidOperationException("Combination not found in list");
+        }
+
+        private int GetTwoAnswerCombo(List<int> lines)
         {
             for (var i = 0; i < lines.Count; i++)
             {
@@ -34,7 +49,7 @@ namespace Day1
                     if (i == j) continue;
 
                     if (lines[i] + lines[j] == 2020)
-                        return (lines[i], lines[j]);
+                        return lines[i] * lines[j];
                 }
             }
 
