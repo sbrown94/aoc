@@ -86,12 +86,10 @@ namespace Day4
 
                             var colour = value.Substring(1, value.Length - 1);
 
-                            if (!Int32.TryParse(colour, out var res))
-                            {
-                                var acceptedLetters = new char[] { 'a', 'b', 'c', 'd', 'e', 'f' };
-                                if (colour.ToArray().Except(acceptedLetters).Any())
-                                    return false; 
-                            }
+                            var acceptedLetters = new char[] {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f' };
+                            if (colour.ToArray().Except(acceptedLetters).Any())
+                                return false; 
+
                             break;
                         }
                     case "ecl":
