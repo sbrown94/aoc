@@ -88,7 +88,8 @@ namespace Day4
 
                             if (!Int32.TryParse(colour, out var res))
                             {
-                                if (colour.Any(char.IsDigit))
+                                var acceptedLetters = new char[] { 'a', 'b', 'c', 'd', 'e', 'f' };
+                                if (colour.ToArray().Except(acceptedLetters).Any())
                                     return false; 
                             }
                             break;
