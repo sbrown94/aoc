@@ -29,30 +29,30 @@ namespace TwentyTwo.Days
 
             if (me == "X")
             {
-                sc += 1;
-
                 if (op == "A")
                     sc += 3;
+                else if (op == "B")
+                    sc += 1;
                 else if (op == "C")
-                    sc += 6;
+                    sc += 2;
             }
             else if (me == "Y")
             {
-                sc += 2;
-
-                if (op == "B")
-                    sc += 3;
-                else if (op == "A")
+                if (op == "A")
+                    sc += 4;
+                else if (op == "B")
+                    sc += 5;
+                else if (op == "C")
                     sc += 6;
             }
             else if (me == "Z")
             {
-                sc += 3;
-
-                if (op == "C")
-                    sc += 3;
+                if (op == "A")
+                    sc += 8;
                 else if (op == "B")
-                    sc += 6;
+                    sc += 9;
+                else if (op == "C")
+                    sc += 7;
             }
 
             return sc;
