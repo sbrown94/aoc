@@ -25,7 +25,7 @@ namespace Day5
 
         private int GetBoardingValue(string line)
         {
-            var range
+            var range = 0;
 
             for(var i = 0; i < line.Length; i++)
             {
