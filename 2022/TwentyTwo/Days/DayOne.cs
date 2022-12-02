@@ -25,7 +25,17 @@ namespace TwentyTwo.Days
                 }
             }
 
-            return elves.Max().ToString();
+            elves.Sort();
+            var items = elves.TakeLast(3);
+
+            calories = 0;
+
+            foreach(var item in items)
+            {
+                calories += item;
+            }
+
+            return calories.ToString();
         }
     }
 }
