@@ -1,13 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30717.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{1E948692-48C6-4082-B137-D568E698033A}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library", "lib\Library.csproj", "{2145A198-8FA4-402A-AB42-F57CF5B1216F}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{72D9EC92-9945-4332-A90F-6F277563064C}"
+	ProjectSection(SolutionItems) = preProject
+		README.txt = README.txt
+	EndProjectSection
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Day1", "2020\Day1\Day1.csproj", "{7408A748-AEE2-4EDF-9877-57C893C9FED3}"
 EndProject
@@ -23,7 +26,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2020", "2020", "{C463E6B1-E
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2022", "2022", "{1683A167-8D0A-4FB1-A627-00368B5D71CC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TwentyTwo", "2022\TwentyTwo\TwentyTwo.csproj", "{0AFBF0CD-171D-4095-BAAD-9781B39B6A5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TwentyTwo", "2022\TwentyTwo\TwentyTwo.csproj", "{0AFBF0CD-171D-4095-BAAD-9781B39B6A5A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
