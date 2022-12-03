@@ -16,8 +16,6 @@ namespace TwentyTwo.Days
 
             for (var i = 0; i < input.Length; i += 3)
             {
-                var dups = new List<char>();
-
                 char val = '0';
 
                 foreach(var ch in input[i])
