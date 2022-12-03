@@ -14,27 +14,23 @@ namespace TwentyTwo.Days
         {
             var total = 0;
 
-            foreach(var line in input)
+            for (var i = 0; i < input.Length; i += 3)
             {
-                var bp1 = line.Substring(0, line.Length/2)?.ToCharArray();
-                var bp2 = line.Substring(line.Length/2)?.ToCharArray();
-
                 var dups = new List<char>();
 
-                foreach(var let in bp2)
+                char val = '0';
+
+                foreach(var ch in input[i])
                 {
-                    if (bp1.Contains(let) && !dups.Contains(let))
-                        dups.Add(let);
+                    if (input[i+1].Contains(ch) && input[i+2].Contains(ch))
+                    {
+                        val = ch;
+                    }
                 }
 
-                var res = 0;
-
-                foreach (var dup in dups)
-                {
-                    res += (int)dup % 32;
-                    if (Char.IsUpper(dup))
-                        res += 26;
-                }
+                var res = (int)val % 32;
+                if (Char.IsUpper(val))
+                    res += 26;
 
                 total += res;
             }
