@@ -8,6 +8,6 @@ Host.CreateDefaultBuilder(args)
         services =>
             services
                 .AddSingleton<IWorker, Worker>()
-                .AddSingleton<IDay, DayTwo>())
+                .AddSingleton<IDay, DayThree>())
                     .Build()
                         .Services.GetService<IWorker>().Run();
